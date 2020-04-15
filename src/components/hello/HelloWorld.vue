@@ -31,7 +31,8 @@
 </template>
 
 <script>
-// import './hello.scss'
+import './hello.scss'
+import '../word/h.scss'
 export default {
   name: 'HelloWorld',
   props: {

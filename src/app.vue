@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/a.png">
-    <p>{{total}}11</p>
+    <p  v-bind:class="isText?'text_active ppp':'text'"  >{{total}}1ds5</p>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -17,13 +17,13 @@ export default {
   data(){
     return {
       total:99999,
+      isText:true,
     }
   },
   created(){
     this.getinfo()
   },
   methods:{
-    
     getinfo(){
       axios.get('/weixin_40755688/phoenix/comment/list/91489538',{
         params:{
@@ -50,4 +50,15 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+    .text{
+        font-size: 20px;
+        color: blue;
+    }
+    .text_active{
+      color: red;
+    }
+    .ppp{
+      font-weight: bold;
+    }
 </style>

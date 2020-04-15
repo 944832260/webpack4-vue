@@ -37,9 +37,13 @@ module.exports = {
         extensions: ['.js','.vue'],//从左向右找，添加后缀
         alias:{
             'vue$': 'vue/dist/vue.esm.js',
+            '@components':path.resolve(__dirname, "src/components"),
             '@pages':path.resolve(__dirname, "src/pages"),
             '@assets': path.resolve(__dirname, "src/assets"),
             '@public': path.resolve(__dirname, "src/public"),
+            '@http': path.resolve(__dirname, "src/http_request"),
+            '@router': path.resolve(__dirname, "src/router"),
+
         }
     },
     module: {

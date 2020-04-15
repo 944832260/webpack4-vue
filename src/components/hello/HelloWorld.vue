@@ -31,6 +31,7 @@
 </template>
 
 <script>
+// import './hello.scss'
 export default {
   name: 'HelloWorld',
   props: {

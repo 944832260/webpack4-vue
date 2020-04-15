@@ -29,4 +29,6 @@
 
 `npm run build`
 
+模拟服务器环境跑打包数据
 
+`npm run serve`

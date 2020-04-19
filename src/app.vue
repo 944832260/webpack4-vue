@@ -2,12 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/a.png">
     <p  v-bind:class="isText?'text_active ppp':'text'"  >{{total}}1ds5</p>
+    <el-button type="primary">主要按钮</el-button>
+    <el-switch
+  v-model="value"
+  active-color="#13ce66"
+  inactive-color="#ff4949">
+</el-switch>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from '@components/hello/HelloWorld.vue'
+import { Button, Select } from 'element-ui';
 import axios from 'axios'
 export default {
   name: 'App',
@@ -18,6 +25,7 @@ export default {
     return {
       total:99999,
       isText:true,
+      value:true,
     }
   },
   created(){

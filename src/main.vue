@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
+  <div id="main">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'main'
+  name: 'Main'
 }
 </script>
 
 <style>
-#app {
+#main {
   position: absolute;
   top: 0px;
   bottom: 0px;

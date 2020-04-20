@@ -7,7 +7,7 @@
 <script>
     export default {
         
-        name:'text'
+        name:'texta'
     }
 </script>
 

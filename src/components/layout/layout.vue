@@ -1,11 +1,9 @@
 <template>
-  <el-container id="text">
-    <el-aside width="200px" class="leftAside" >
-		<div class="logo">
-			logo
-		</div>
+  <el-container id="layout">
+    <el-aside width="200px" class="leftAside">
+      <div class="logo">logo</div>
       <el-menu
-        default-active="2"
+        default-active="0"
         class="el-menu-vertical-demo menu-ul"
         @open="handleOpen"
         @close="handleClose"
@@ -13,23 +11,28 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <el-submenu index="1">
+        <el-submenu
+          :index="String(index)"
+          v-for="(item,index) in Menulist"
+          :key="index"
+          v-if="item.children"
+        >
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>导航一</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
+            <el-menu-item
+              :index="String(index) + '-' + String(ix)"
+              v-for="(it,ix) in item.children"
+              :key="ix"
+              @click="router(it.path)"
+            >{{it.name}}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
-        <el-menu-item index="2">
-          <i class="el-icon-menu"></i>
-          <span slot="title">导航二</span>
-        </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item :index="String(index)" v-else @click="router(item.path)">
           <i class="el-icon-setting"></i>
-          <span slot="title">设置</span>
+          <span slot="title">{{item.name}}</span>
         </el-menu-item>
       </el-menu>
     </el-aside>
@@ -43,10 +46,20 @@
 </template>
 
 <script>
-import "./text.scss";
+import "./layout.scss";
+import Menulist from "./layout.config";
+
 export default {
-  name: "texta",
+  name: "Layout",
+  data() {
+    return {
+      Menulist
+    };
+  },
   methods: {
+    router(path) {
+      this.$router.push(path);
+    },
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
@@ -58,27 +71,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.el-container {
-  height: 100%;
-}
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.el-aside {
-  background-color: rgb(84, 92, 100);
-  color: #333;
-  height: 100%;
-  line-height: 100%;
-}
-
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
 </style>

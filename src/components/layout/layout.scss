@@ -1,0 +1,37 @@
+#layout {
+    height: 100%;
+
+    .leftAside {
+        background-color: rgb(84, 92, 100);
+        color: #333;
+        height: 100%;
+        line-height: 100%;
+
+        .logo {
+            height: 60px;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff;
+            line-height: 60px;
+        }
+
+        .menu-ul {
+            border: none;
+        }
+    }
+
+    .el-header {
+        background-color: #b3c0d1;
+        color: #333;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .el-main {
+        background-color: #e9eef3;
+        color: #333;
+        text-align: center;
+        line-height: 160px;
+    }
+}

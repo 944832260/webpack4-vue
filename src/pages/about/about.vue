@@ -23,7 +23,7 @@ export default {
   },
   methods:{
     routerText(id){
-      this.$router.push('/text/text2/' + id)
+      this.$router.push('/admin/setting')
     }
   }
 };

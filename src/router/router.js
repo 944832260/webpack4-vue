@@ -2,6 +2,9 @@ import Vue from 'vue'
 // import Router from 'vue-router'
 
 import About from '@pages/about/about.vue'
+import Layout from '../components/layout/layout.vue'
+import Setting from '../pages/setting/setting.vue'
+
 import Text from '@pages/text/text.vue'
 import Text2 from '@pages/text/text2.vue'
 import Text3 from '@pages/text/text3.vue'
@@ -25,11 +28,12 @@ export default new VueRouter({
       path: '/about/:id',
       component: About,
     },{
-      path: '/text',
-      component: Text,
+      path: '/admin',
+      component: Layout,
       children:[
-        {path:'text2/:id',component:Text2},
-        {path:'text3',component:Text3},
+        {path:'about',component:Text2},
+        {path:'table',component:Text3},
+        {path:'setting',component:Setting},
       ]
     }
 

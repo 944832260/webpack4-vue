@@ -3,3 +3,13 @@ $vm_base: 1400;//设计图尺寸
 @function vm($px) {
   @return ($px / 1400) * 100vw;
 }
+html,body{
+  height: 100%;
+}
+html, body, p, ul, li, img, input, textarea, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}

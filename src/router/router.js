@@ -22,14 +22,13 @@ export default new VueRouter({
       path: '/',
       component: About,
     },{
-      path: '/about',
+      path: '/about/:id',
       component: About,
     },{
       path: '/text',
       component: Text,
       children:[
-        // {path:'/',component:Text},
-        {path:'text2',component:Text2},
+        {path:'text2/:id',component:Text2},
         {path:'text3',component:Text3},
       ]
     }

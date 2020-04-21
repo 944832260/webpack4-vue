@@ -4,6 +4,8 @@ import Vue from 'vue'
 import About from '@pages/about/about.vue'
 import Layout from '../components/layout/layout.vue'
 import Setting from '../pages/setting/setting.vue'
+import Table from '../pages/table/table.vue'
+import Tabledetail from '../pages/table/tabledetail.vue'
 
 import Text from '@pages/text/text.vue'
 import Text2 from '@pages/text/text2.vue'
@@ -32,7 +34,8 @@ export default new VueRouter({
       component: Layout,
       children:[
         {path:'about',component:Text2},
-        {path:'table',component:Text3},
+        {path:'table',component:Table},
+        {path:'table/:id',component:Tabledetail},
         {path:'setting',component:Setting},
       ]
     }

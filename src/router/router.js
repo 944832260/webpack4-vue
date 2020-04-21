@@ -35,6 +35,7 @@ export default new VueRouter({
       children:[
         {path:'about',component:Text2},
         {path:'table',component:Table},
+        {path:'canvas',component:Text3},
         {path:'table/:id',component:Tabledetail},
         {path:'setting',component:Setting},
       ]

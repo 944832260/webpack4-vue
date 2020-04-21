@@ -5,6 +5,10 @@ const menulist = [
         path:"/admin/setting"
     },
     {
+        name:"canvas",
+        path:"/admin/canvas"
+    },
+    {
         name:"目录一",
         children:[{
             name:"关于",

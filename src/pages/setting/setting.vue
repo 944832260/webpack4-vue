@@ -7,9 +7,10 @@
       </el-select>
     </div>
     <div style="margin-top:50px">
-      <p>count:{{$store.state.count}}</p>
-      <el-button type="primary">+</el-button>
-      <el-button type="primary">-</el-button>
+      <p>count:{{num}}</p>
+      <!-- <p>count:{{$store.state.count}}</p> -->
+      <el-button @click="add(10)" type="primary">+</el-button>
+      <el-button @click="reduce" type="primary">-</el-button>
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@
 <script>
 import './setting.scss'
 import store from '@store/store'
+import {mapState, mapMutations, mapGetters} from 'vuex'
 export default {
     name:'Setting',
     data() {
@@ -42,10 +44,19 @@ export default {
       }
     },
     store,
+    computed:{
+      num:state=>state.num,
+      // ...mapState(['num']),
+      num(){
+        return this.$store.state.a.num;
+      }
+      // ...mapGetters(['num']),
+    },
     methods:{
         cha(a){
             console.log(a,'6666666666')
-        }
+        },
+        ...mapMutations(['reduce','add'])
     }
 }
 </script>

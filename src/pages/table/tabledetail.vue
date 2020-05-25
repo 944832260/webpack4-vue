@@ -19,6 +19,7 @@ export default {
     };
   },
   created() {
+    console.log(this.$route,'22')
     this.policyId = this.$route.params.id;
   },
   mounted(){

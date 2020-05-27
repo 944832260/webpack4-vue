@@ -9,6 +9,13 @@ const menulist = [
         path:"/admin/canvas"
     },
     {
+        name:"echarts",
+        path:"/echarts"
+    },{
+        name:"highcharts",
+        path:"/highcharts"
+    },
+    {
         name:"目录一",
         children:[{
             name:"关于",

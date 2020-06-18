@@ -9,7 +9,6 @@ const Config = require('./webpack_config/dev.config')
 let moduleConfig = require('./webpack_config/module.config')
 let pluginsConfig = require('./webpack_config/plugins.config')
 
-
 module.exports = {
     mode: MODE,
     devtool: IsDevelopment ? 'source-map' : 'cheap-module-source-map',//增加映射文件，可以帮我们调试源码，出错了会报出错的列和行

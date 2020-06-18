@@ -9,7 +9,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const { MODE } = process.env;
 let IsDevelopment = MODE === 'development';//development是true,不是开发false
 
-
 const pluginsConfig = [
 	// 模块中注入
 	// new webpack.ProvidePlugin({

@@ -6,12 +6,12 @@
 
 <script>
 export default {
-  name: 'Main'
-}
+  name: "Main"
+};
 </script>
 
 <style>
-#main{
+#main {
   height: 100%;
   width: 100%;
 }
